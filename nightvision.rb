@@ -9,16 +9,16 @@ class Nightvision < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://downloads.nightvision.net/binaries/0.1.6/nightvision_0.1.6_darwin_arm64.tar.gz"
-      sha256 "3204e2793621c0d303fcad99fe16f262a605da1a258757b5101618989f67574b"
+      url "https://downloads.nightvision.net/binaries/v0.1.6/nightvision_0.1.6_darwin_arm64.tar.gz"
+      sha256 "752f74a0a426ddfc9da2822341e1a2617f41686eafeb0c1ad9e750c4e70d59f9"
 
       def install
         bin.install "nightvision"
       end
     end
     if Hardware::CPU.intel?
-      url "https://downloads.nightvision.net/binaries/0.1.6/nightvision_0.1.6_darwin_amd64.tar.gz"
-      sha256 "55382989f994f970851abb6ff95f229f9a72f5231a54248b1f9ca7b80c25f2d6"
+      url "https://downloads.nightvision.net/binaries/v0.1.6/nightvision_0.1.6_darwin_amd64.tar.gz"
+      sha256 "0f2853768ac55fcbff7ec465bfec523e4b9489264271071c77223e26edc2b25e"
 
       def install
         bin.install "nightvision"
@@ -27,17 +27,17 @@ class Nightvision < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://downloads.nightvision.net/binaries/0.1.6/nightvision_0.1.6_linux_arm64.tar.gz"
-      sha256 "085da762951b70700ef9f2e5a606cd1a5053b618f13b65f5ee11ee0bb38046ca"
+    if Hardware::CPU.intel?
+      url "https://downloads.nightvision.net/binaries/v0.1.6/nightvision_0.1.6_linux_amd64.tar.gz"
+      sha256 "5fe89a0157b18f2396b02dfe7210056ffdcf1d7e49084a2edc46f446fc2dc6e5"
 
       def install
         bin.install "nightvision"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://downloads.nightvision.net/binaries/0.1.6/nightvision_0.1.6_linux_amd64.tar.gz"
-      sha256 "70a16f48b6ccaa5da340005ac4eeb26fd6d3ea388ce3f3db43aef9e08bdb405f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://downloads.nightvision.net/binaries/v0.1.6/nightvision_0.1.6_linux_arm64.tar.gz"
+      sha256 "27ed2767d08f10771bbd55c0f04c731d07fc945eb6d54e6bf2eb38440af57e3e"
 
       def install
         bin.install "nightvision"
