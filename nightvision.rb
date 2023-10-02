@@ -5,20 +5,20 @@
 class Nightvision < Formula
   desc "nightvision CLI allows you to start security scans of web apps as part of your development cycle"
   homepage "https://github.com/NimblerSecurity/cli"
-  version "0.2.11"
+  version "0.2.12"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://downloads.nightvision.net/binaries/0.2.11/nightvision_0.2.11_darwin_amd64.tar.gz"
-      sha256 "9b79766312a2b1858a3ef1c39c50b2ac0cd04220791d7be0f44b985a57d88daf"
+    if Hardware::CPU.arm?
+      url "https://downloads.nightvision.net/binaries/v0.2.12/nightvision_0.2.12_darwin_arm64.tar.gz"
+      sha256 "76b80591dea025344b25d34c37df6346e96e1dabd0a9c39419a5bdcf54b5d083"
 
       def install
         bin.install "nightvision"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://downloads.nightvision.net/binaries/0.2.11/nightvision_0.2.11_darwin_arm64.tar.gz"
-      sha256 "47da9d43f152bfd9b13a7de1c765ad3b73022ce44b878b7f7a6fc7dbdbe83da9"
+    if Hardware::CPU.intel?
+      url "https://downloads.nightvision.net/binaries/v0.2.12/nightvision_0.2.12_darwin_amd64.tar.gz"
+      sha256 "b02944c088c233348095988f421eaaaa14c924eb59d43bfbf09e2eed3a4760ba"
 
       def install
         bin.install "nightvision"
@@ -27,17 +27,17 @@ class Nightvision < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://downloads.nightvision.net/binaries/0.2.11/nightvision_0.2.11_linux_arm64.tar.gz"
-      sha256 "e855b01c2e8b8b4fb8610f64640899bf9a14b61daac913eda4ea3f81044c8308"
+    if Hardware::CPU.intel?
+      url "https://downloads.nightvision.net/binaries/v0.2.12/nightvision_0.2.12_linux_amd64.tar.gz"
+      sha256 "e7aa11d36abb6f7ddd881f890fc11de7c0346d581ebcadd6d0dfaa815a8b5909"
 
       def install
         bin.install "nightvision"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://downloads.nightvision.net/binaries/0.2.11/nightvision_0.2.11_linux_amd64.tar.gz"
-      sha256 "254cef1f65fbeeadc0ade22c7706c192937e272e51339a847707084515e97add"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://downloads.nightvision.net/binaries/v0.2.12/nightvision_0.2.12_linux_arm64.tar.gz"
+      sha256 "289ddc1d78bf0cb731fb104748e9440e997dd0acdf175838c30c05c6c1898c7e"
 
       def install
         bin.install "nightvision"
