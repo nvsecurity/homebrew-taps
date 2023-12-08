@@ -8,17 +8,17 @@ class Nightvision < Formula
   version "0.4.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_darwin_amd64.tar.gz"
-      sha256 "7800e67efcb17f9cfccdd3e74b0181e6517498af6cf34bf61582af3267c7f646"
+    if Hardware::CPU.arm?
+      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_darwin_arm64.tar.gz"
+      sha256 "d54aaf44a4526e15b7118287e16fe6fde896ba052ef3a0304c35a774f3d73cfd"
 
       def install
         bin.install "nightvision"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_darwin_arm64.tar.gz"
-      sha256 "e1f29736c56812f422b63c8a8eb6ff6ba1773b719dcd7295df85b0b85fbc5a8c"
+    if Hardware::CPU.intel?
+      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_darwin_amd64.tar.gz"
+      sha256 "d4030f7288ac990c73957b1df110cfcb951a60e1e3db20aca9ee07e30106eade"
 
       def install
         bin.install "nightvision"
@@ -27,17 +27,17 @@ class Nightvision < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_linux_amd64.tar.gz"
-      sha256 "68411da4634c224088263066ddd46b40eba8e788f07b9cf1e612a13c265f8d68"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_linux_arm64.tar.gz"
+      sha256 "1af8ff648a195663fd3e117fa4f6ff90089e77fed7de63a9ab18886cf75e0bd8"
 
       def install
         bin.install "nightvision"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_linux_arm64.tar.gz"
-      sha256 "7f8afada729849fd125488a7a3e2b8ab7bae7a9356f3a3326a77bebee1713e3a"
+    if Hardware::CPU.intel?
+      url "https://downloads.nightvision.net/binaries/0.4.0/nightvision_0.4.0_linux_amd64.tar.gz"
+      sha256 "b399a4454767d9bdd3c2b729e9327092ffb0df6ce71cd0c252c84818545b837c"
 
       def install
         bin.install "nightvision"
