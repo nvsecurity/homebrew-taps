@@ -5,20 +5,20 @@
 class Nightvision < Formula
   desc "nightvision CLI allows you to start security scans of web apps as part of your development cycle"
   homepage "https://github.com/NimblerSecurity/cli"
-  version "0.9.15"
+  version "0.9.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://downloads.nightvision.net/binaries/v0.9.15/nightvision_0.9.15_darwin_amd64.tar.gz"
-      sha256 "173bfeff2249b6a8c4451fc076fb6f020ccb238b4d7849952e69d0336bb61ca2"
+      url "https://downloads.nightvision.net/binaries/0.9.16/nightvision_0.9.16_darwin_amd64.tar.gz"
+      sha256 "268cea12abfdb0259545da7b0e1f8037a6a36469e9cc7ad0b836246f66adc49e"
 
       def install
         bin.install "nightvision"
       end
     end
     if Hardware::CPU.arm?
-      url "https://downloads.nightvision.net/binaries/v0.9.15/nightvision_0.9.15_darwin_arm64.tar.gz"
-      sha256 "f8057ff65991262cae0b2d8d5188147b2eea205ce30033359c8eb7cfe467e93f"
+      url "https://downloads.nightvision.net/binaries/0.9.16/nightvision_0.9.16_darwin_arm64.tar.gz"
+      sha256 "e26b629c1b1a7d13da6fb6948da412e352fc358ecbe79101819de769c469285e"
 
       def install
         bin.install "nightvision"
@@ -28,15 +28,15 @@ class Nightvision < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://downloads.nightvision.net/binaries/v0.9.15/nightvision_0.9.15_linux_amd64.tar.gz"
-      sha256 "f8694dc45a84b7b79970e568e0a85c336ae4096986d3563c2b997d9d21905743"
+      url "https://downloads.nightvision.net/binaries/0.9.16/nightvision_0.9.16_linux_amd64.tar.gz"
+      sha256 "f2056b499ba56f0f5ef9569635ff690bdff4a19df2f3a2765a29227639a1b1db"
       def install
         bin.install "nightvision"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://downloads.nightvision.net/binaries/v0.9.15/nightvision_0.9.15_linux_arm64.tar.gz"
-      sha256 "4b5e5f9e22c7750f48a4fa559ef1204083faf1ed5898c2729d024133516015cb"
+      url "https://downloads.nightvision.net/binaries/0.9.16/nightvision_0.9.16_linux_arm64.tar.gz"
+      sha256 "54b5fb5529641cc1803c54fb4d8cc2ecd2481d177d1c3ded94a0cb55b75450ae"
       def install
         bin.install "nightvision"
       end
