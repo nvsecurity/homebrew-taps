@@ -10,7 +10,7 @@ class Nightvision < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://downloads.nightvision.net/binaries/0.10.9/nightvision_0.10.9_darwin_amd64.tar.gz"
-      sha256 "2b63c1c098c4557b05c67355c826cabd5bcc82eaeddce3459e9c1374d9173126"
+      sha256 "04842cea97b3c2b9425609e4ec8985df194912ed0b6a25045fff7a7a626a118e"
 
       define_method(:install) do
         bin.install "nightvision"
@@ -18,7 +18,7 @@ class Nightvision < Formula
     end
     if Hardware::CPU.arm?
       url "https://downloads.nightvision.net/binaries/0.10.9/nightvision_0.10.9_darwin_arm64.tar.gz"
-      sha256 "0bdeb015a8d28cb2d109684def5c3e03f829da29fbd33e379d6a783cc9639071"
+      sha256 "2379bd08486f80c4335d0f8586898b1c5a068b74018c4b6988fdfb17543fb9fc"
 
       define_method(:install) do
         bin.install "nightvision"
@@ -29,14 +29,14 @@ class Nightvision < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://downloads.nightvision.net/binaries/0.10.9/nightvision_0.10.9_linux_amd64.tar.gz"
-      sha256 "51594569a4dc1c43b62efd042ec4d40b6a493585f13696d4b2b74653ba4479fa"
+      sha256 "f1e39f32c31dc6a1ed35ae7cdf193797dd9873c1c3dea5f6b8152ed5af944539"
       define_method(:install) do
         bin.install "nightvision"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://downloads.nightvision.net/binaries/0.10.9/nightvision_0.10.9_linux_arm64.tar.gz"
-      sha256 "cdbfb000a99bad5558aca7061dc0ea0bfb0e4de345ab7523aa129c8f5210d029"
+      sha256 "57c35f0bfbb20d792fdec82c17a2c764cc84a7eb92e013574ee91573e2dc45ec"
       define_method(:install) do
         bin.install "nightvision"
       end
